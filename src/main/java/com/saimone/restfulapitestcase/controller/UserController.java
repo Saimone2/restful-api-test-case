@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
@@ -26,5 +27,10 @@ public class UserController {
     @PostMapping
     public Long addUser(@RequestBody User user) {
         return service.save(user);
+    }
+
+    @PutMapping("/{id}")
+    public Map<String, String> updateUser(@PathVariable Long id) {
+        return service.updateUser(id);
     }
 }
