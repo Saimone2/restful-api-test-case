@@ -19,12 +19,12 @@ public class UserController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Object> getUserById(@PathVariable Long id) {
-        return service.findById(id);
+        return service.findUserById(id);
     }
 
     @PostMapping
     public ResponseEntity<Object> addUser(@RequestBody User user) {
-        return service.save(user);
+        return service.saveUser(user);
     }
 
     @PutMapping("/{id}")
