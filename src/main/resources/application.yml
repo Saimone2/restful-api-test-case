@@ -11,3 +11,16 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+logging:
+  level:
+    org:
+    springframework:
+      web: INFO
+    com:
+      saimone:
+        restfulapitestcase: debug
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/application.log

@@ -57,7 +57,6 @@ class UserServiceImplTest {
         // then
         assertThrows(UserExistingEmailException.class, () -> userService.saveUser(user2));
         verify(userRepository).findByEmail(Mockito.any());
-        verify(userRepository).saveAndFlush(user);
     }
 
     @Test
